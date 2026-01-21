@@ -1,0 +1,116 @@
+# ==========================
+# Python & Standard
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================
+# Environments
+# ==========================
+# 忽略常见的虚拟环境目录
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+anaconda3/
+# 注意：environment.yml 通常需要提交，所以不在此列出
+
+# ==========================
+# IDE & Editor & OS
+# ==========================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.pydevproject
+.settings/
+.ipynb_checkpoints/
+
+# ==========================
+# Machine Learning & LLM (Crucial)
+# ==========================
+# 忽略模型权重文件（非常大，绝对不要提交）
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.h5
+*.onnx
+*.tflite
+model.safetensors
+adapter_model.bin
+
+# 忽略本地的数据集文件夹（假设你可能在根目录或子目录存放数据）
+data/
+dataset/
+datasets/
+# 忽略大型数据文件
+*.arrow
+*.parquet
+*.jsonl
+# 注意：保留 .json 和 .csv 除非你确定它们是巨大的数据文件，因为 configs 常用 json
+# *.csv 
+
+# ==========================
+# Logs & Outputs
+# ==========================
+# 训练日志、WandB 日志、检查点
+wandb/
+runs/
+logs/
+output/
+outputs/
+results/
+checkpoints/
+*.log
+
+# ==========================
+# Project Specific (qw_evaluation/latex2sympy)
+# ==========================
+# 忽略 Java 编译文件 (latex2sympy 依赖 Java)
+*.class
+# 通常忽略 jar 包，但如果你的项目必须包含 antlr jar，请解开下面这行的注释
+# *.jar
+
+# 忽略 ANTLR 生成的中间文件 (位于 gen/ 目录中)
+# 只有当你希望每次都重新生成这些文件时才忽略它们。
+# 如果你希望提交现有的 parser 代码，请不要取消下面的注释。
+# qw_evaluation/latex2sympy/gen/*.interp
+# qw_evaluation/latex2sympy/gen/*.tokens
+
+# ==========================
+# Testing & Coverage
+# ==========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+outputs/
+datas/
+logs/

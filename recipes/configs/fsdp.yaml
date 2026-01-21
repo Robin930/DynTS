@@ -1,0 +1,17 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: FSDP
+num_processes: 4            # 按你的GPU数量改，比如8卡
+mixed_precision: bf16       # BF16 更稳；如果卡只支持FP16，可改 fp16
+downcast_bf16: no
+
+# fsdp_config:
+#   fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP
+#   sharding_strategy: FULL_SHARD          # 全分片，最大化节省显存
+#   state_dict_type: FULL_STATE_DICT
+#   sync_module_states: true
+#   limit_all_gathers: true
+#   use_orig_params: true
+#   activation_checkpointing: false        # 纯推理用不到反传激活，通常不开
+#   # ——强力省显存：CPU Offload——
+#   offload_params: true                   # 参数从显存溢出到CPU（更省显存、显著变慢）
+#   cpu_ram_efficient_loading: true
